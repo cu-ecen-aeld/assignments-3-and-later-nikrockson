@@ -31,6 +31,8 @@ bool do_exec(int count, ...)
 	va_end(args);
 
 	// create a child process
+	printf("Attempting to run :%s\n", command[0]);
+	fflush(stdout); // flush stdout
 	pid_t pid = fork();
 	if (pid == -1) 
 	{
